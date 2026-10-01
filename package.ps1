@@ -4,7 +4,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $classroomRoot = $PSScriptRoot
 $classroomSource = Join-Path $classroomRoot 'dist'
 $classroomZip = Join-Path $classroomRoot 'AI生活课堂.zip'
-$classroomFiles = @('index.html', 'styles.css', 'demos.css', 'trust.css', 'data.js', 'demo-data.js', 'demo-ui.js', 'trust-data.js', 'trust-ui.js', 'app.js', '打开网站说明.txt')
+$classroomFiles = @('index.html', 'styles.css', 'demos.css', 'trust.css', 'data.js', 'demo-data.js', 'demo-ui.js', 'trust-data.js', 'trust-ui.js', 'app.js', 'about.js', '打开网站说明.txt')
 foreach ($classroomName in $classroomFiles) {
     if (-not (Test-Path -LiteralPath (Join-Path $classroomSource $classroomName) -PathType Leaf)) { throw "Missing delivery file: $classroomName" }
 }

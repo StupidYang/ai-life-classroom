@@ -1,26 +1,29 @@
 项目：AI 生活课堂
-技术：原生 HTML + CSS + JavaScript，无生产依赖、无构建步骤、无外部资源请求。
-网站目录：dist
-入口：dist/index.html
-内容：dist/data.js
-样式：dist/styles.css
-交互：dist/app.js
-使用说明：dist/打开网站说明.txt
+技术：HTML + CSS + 原生 JavaScript，无生产依赖和构建步骤。
+快速开始与发布见 README.md。本地入口 dist/index.html，发布目录 dist。
 
-维护方式：直接修改上述文件，浏览器刷新即可。
-所有课程、案例、求助模板都在 data.js，用户输入通过 textContent 或 HTML 转义展示。
-哈希路由支持 file://；不使用 ES 模块、fetch、服务工作线程或在线字体。
-检查工具位于 checks，仅开发验证使用，不随 ZIP 分享。
+文件分工
+app.js：路由、课程、表单、复制、学习进度、手机版目录和课内定位。
+data.js：基础课程、场景模板和求助内容。
+demo-data.js / demo-ui.js：完整案例的数据与交互。
+trust-data.js / trust-ui.js：核心方法课、课程顺序与验证练习。
+about.js：网站制作过程及实际部署报错案例。
+styles.css / demos.css / trust.css：页面、演示和响应式样式。
+以上文件都在 dist 目录。
+scripts/check-site.mjs：本地资源、JS 语法和内容结构检查，无第三方依赖。
+docs/images：README 截图，不包含在网站发布或离线包中。
 
-打包：运行项目根目录下的 package.ps1。
-它只打包 dist 下的 11 个交付文件，并放进统一的 AI生活课堂 文件夹。
-不会打包 node_modules、浏览器测试资料、学习进度或用户输入。
+维护约定
+修改后运行 node scripts/check-site.mjs，再检查电脑和手机页面。
+课程 ID 用于保存学习记录；调整显示顺序时改 COURSE_ORDER，保留已有 ID。
+界面保持教程口吻，先讲怎么做，再解释原因，术语先举例说明。
+演示应有原始材料、初稿、问题、修改和结果；不得编造真实来源或经历。
+用户输入通过 textContent 或 HTML 转义展示。
+支持 file://，不使用 ES 模块、fetch、在线字体或服务工作线程。
+学习状态仅保存在浏览器；表单不持久保存，不上传。
 
-完整演示内容：dist/demo-data.js；演示逻辑：dist/demo-ui.js；演示样式：dist/demos.css。
-12 个完整演示与 42 个模板分别展示，大学生专区含 6 个完整演示。
-当前用户要求先预览，不运行 package.ps1，不生成 ZIP。
-
-核心课程与验证案例：dist/trust-data.js；验证交互：dist/trust-ui.js；样式：dist/trust.css。
-新增课程仅追加，保留旧课程 ID 与既有浏览器进度。主线由首页和核心课程入口引导。
-
-文案约定：面向零基础读者，用亲切、具体的教程语言。先讲怎么做，再解释原因；术语先举例解释。避免宣传口号、堆叠抽象名词、居高临下的说教，也不把语气写得幼稚。涉及事实核对、隐私与学术要求时保留准确含义。
+检查与打包
+checks 是本地开发检查目录，被 Git 忽略，不属于网站运行所需文件。
+package.ps1 仅在需要 ZIP 时手动运行，打包网站的 12 个文件。
+不打包 Git 数据、依赖、缓存、截图和学习记录。本次优化不生成 ZIP。
+最近一轮内容审核见 全站审核记录.txt。

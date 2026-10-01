@@ -6,12 +6,13 @@
   <title>AI 生活课堂 · AI 入门教程</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232e59d9'/%3E%3Cpath d='M10 28L20 10l10 18M14 22h12' stroke='white' fill='none' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="demos.css"><link rel="stylesheet" href="trust.css">
-  <script defer src="data.js"></script><script defer src="demo-data.js"></script><script defer src="trust-data.js"></script><script defer src="demo-ui.js"></script><script defer src="trust-ui.js"></script><script defer src="app.js"></script>
+  <script defer src="data.js"></script><script defer src="demo-data.js"></script><script defer src="trust-data.js"></script><script defer src="demo-ui.js"></script><script defer src="trust-ui.js"></script><script defer src="about.js"></script><script defer src="app.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到课程内容</a>
   <aside class="sidebar" aria-label="主导航">
     <a class="brand" href="#home"><span class="brand-mark">Ai<span>✦</span></span><span>AI 生活课堂<small>从提问开始，边做边学</small></span></a>
+    <button class="quiet menu-toggle" id="menu-toggle" aria-controls="navigation" aria-expanded="false">打开目录</button>
     <div class="sidebar-label">我的学习空间</div>
     <nav id="navigation"></nav>
     <div class="sidebar-note"><span class="note-icon">✳</span><strong>遇到不懂的地方</strong><p>可以让 AI 换个说法，<br>也可以一次只问一步。</p><a href="#help">看看怎么问</a></div>
@@ -20,7 +21,7 @@
   <div class="workspace">
     <header class="topbar"><span id="breadcrumb">学习首页</span><div class="top-actions"><span class="desktop-only">零基础也可以学</span><button id="font-toggle" class="quiet" aria-pressed="false">大字模式</button><button id="print" class="quiet" aria-label="打印当前页面">打印</button></div></header>
     <main id="main" tabindex="-1"></main>
-    <footer>AI 生活课堂 <span>有不懂的地方，就停下来问一句。</span><a href="#sources">资料与使用说明</a></footer>
+    <footer>AI 生活课堂 <span>有不懂的地方，就停下来问一句。</span><a href="#about">这个网站怎么做的</a><a href="#sources">资料与使用说明</a></footer>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><button class="dialog-close quiet" aria-label="关闭弹窗">关闭 ×</button><div id="dialog-body"></div></dialog>
