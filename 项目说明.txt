@@ -1,0 +1,26 @@
+项目：AI 生活课堂
+技术：原生 HTML + CSS + JavaScript，无生产依赖、无构建步骤、无外部资源请求。
+网站目录：dist
+入口：dist/index.html
+内容：dist/data.js
+样式：dist/styles.css
+交互：dist/app.js
+使用说明：dist/打开网站说明.txt
+
+维护方式：直接修改上述文件，浏览器刷新即可。
+所有课程、案例、求助模板都在 data.js，用户输入通过 textContent 或 HTML 转义展示。
+哈希路由支持 file://；不使用 ES 模块、fetch、服务工作线程或在线字体。
+检查工具位于 checks，仅开发验证使用，不随 ZIP 分享。
+
+打包：运行项目根目录下的 package.ps1。
+它只打包 dist 下的 11 个交付文件，并放进统一的 AI生活课堂 文件夹。
+不会打包 node_modules、浏览器测试资料、学习进度或用户输入。
+
+完整演示内容：dist/demo-data.js；演示逻辑：dist/demo-ui.js；演示样式：dist/demos.css。
+12 个完整演示与 42 个模板分别展示，大学生专区含 6 个完整演示。
+当前用户要求先预览，不运行 package.ps1，不生成 ZIP。
+
+核心课程与验证案例：dist/trust-data.js；验证交互：dist/trust-ui.js；样式：dist/trust.css。
+新增课程仅追加，保留旧课程 ID 与既有浏览器进度。主线由首页和核心课程入口引导。
+
+文案约定：面向零基础读者，用亲切、具体的教程语言。先讲怎么做，再解释原因；术语先举例解释。避免宣传口号、堆叠抽象名词、居高临下的说教，也不把语气写得幼稚。涉及事实核对、隐私与学术要求时保留准确含义。

@@ -1,0 +1,17 @@
+# Local browser checks, dependencies, screenshots, and generated reports
+/checks/
+node_modules/
+
+# Local archives and caches
+*.zip
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Local credentials and editor settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
